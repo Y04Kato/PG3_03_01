@@ -14,7 +14,7 @@ public:
 
 	void Draw();
 
-	int GetEnemyDeadCount() { return enemyDeadCount; }
+	int GetEnemyDeadCount() { return enemyDeadCount / 32; }
 
 public:
 	Object player;
