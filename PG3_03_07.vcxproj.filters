@@ -68,14 +68,11 @@
     <ClCompile Include="GameData\GameObject\Player.cpp">
       <Filter>GameData\GameObject</Filter>
     </ClCompile>
-    <ClCompile Include="GameData\GameObject\Enemy.cpp">
-      <Filter>GameData\GameObject</Filter>
+    <ClCompile Include="GameData\GameObject\ICommand.cpp">
+      <Filter>KamataEngine</Filter>
     </ClCompile>
-    <ClCompile Include="GameData\GameObject\Collisionfunc.cpp">
-      <Filter>GameData\GameObject</Filter>
-    </ClCompile>
-    <ClCompile Include="GameData\GameObject\Bullet.cpp">
-      <Filter>GameData\GameObject</Filter>
+    <ClCompile Include="GameData\GameObject\InputHandler.cpp">
+      <Filter>KamataEngine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -168,17 +165,10 @@
     <ClInclude Include="GameData\GameObject\Player.h">
       <Filter>GameData\GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="GameData\GameObject\Enemy.h">
-      <Filter>GameData\GameObject</Filter>
-    </ClInclude>
-    <ClInclude Include="GameData\GameObject\Collisionfunc.h">
-      <Filter>GameData\GameObject</Filter>
-    </ClInclude>
     <ClInclude Include="GameData\GameObject\Object.h">
       <Filter>GameData\GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="GameData\GameObject\Bullet.h">
-      <Filter>GameData\GameObject</Filter>
-    </ClInclude>
+    <ClInclude Include="GameData\GameObject\ICommand.h" />
+    <ClInclude Include="GameData\GameObject\InputHandler.h" />
   </ItemGroup>
 </Project>

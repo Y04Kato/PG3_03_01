@@ -3,27 +3,40 @@
 
 void GamePlayScene::Initialize() {
 	input_ = Input::GetInstance();
+
+	inputHandler_ = new InputHandler();
+
+	inputHandler_->AssignMoveRightCommand2PressKeyD();
+	inputHandler_->AssignMoveLeftCommand2PressKeyA();
+
+	player_ = new Player();
 }
 
 void GamePlayScene::Update() {
 	ImGui::Begin("GamePlayScene");
 	ImGui::Text("SceneNo:%d", sceneNo);
-	ImGui::Text("Clear when 5 enemies are defeated");
-	ImGui::Text("KillCount:%d", player->GetEnemyDeadCount());
-	ImGui::Text("Move:WASD");
-	ImGui::Text("Shot:Space");
+	ImGui::Text("Move:AD");
+	ImGui::Text("NextScene:Space");
 	ImGui::End();
 
-	player->Update();
-	if (player->GetEnemyDeadCount() >= 5) {
+	command_ = inputHandler_->HandleInput();
+
+	if (this->command_) {
+		command_->Exec(*player_);
+	}
+
+	player_->Update();
+
+	if (input_->TriggerKey(DIK_SPACE)) {
 		sceneNo = CLEAR_SCENE;
 	}
 }
 
 void GamePlayScene::Draw() {
-	player->Draw();
+	player_->Draw();
 }
 
 void GamePlayScene::Finalize() {
-	delete player;
+	delete player_;
+	delete inputHandler_;
 }

@@ -1,8 +1,5 @@
 #pragma once
 #include "Object.h"
-#include "Bullet.h"
-#include "Enemy.h"
-#include "Collisionfunc.h"
 #include "Input.h"
 
 class Player {
@@ -14,19 +11,14 @@ public:
 
 	void Draw();
 
-	int GetEnemyDeadCount() { return enemyDeadCount / 32; }
+	void MoveRight();
+	void MoveLeft();
 
 public:
 	Object player;
 
-	Bullet* bullet[32];
-
-	Enemy* enemy;
-
 	Input* input_ = nullptr;
 
 	bool playerIsAlive;
-
-	int enemyDeadCount;
 };
 

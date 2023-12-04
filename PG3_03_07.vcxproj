@@ -115,9 +115,8 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\TextureManager.cpp" />
     <ClCompile Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.cpp" />
     <ClCompile Include="C:\KamataEngine\Adapter\Novice.cpp" />
-    <ClCompile Include="GameData\GameObject\Bullet.cpp" />
-    <ClCompile Include="GameData\GameObject\Collisionfunc.cpp" />
-    <ClCompile Include="GameData\GameObject\Enemy.cpp" />
+    <ClCompile Include="GameData\GameObject\ICommand.cpp" />
+    <ClCompile Include="GameData\GameObject\InputHandler.cpp" />
     <ClCompile Include="GameData\GameObject\Player.cpp" />
     <ClCompile Include="GameData\SceneManager\SceneManager.cpp" />
     <ClCompile Include="GameData\SceneManager\IScene.cpp" />
@@ -154,9 +153,8 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClInclude Include="C:\KamataEngine\DirectXGame\input\Input.h" />
     <ClInclude Include="C:\KamataEngine\DirectXGame\scene\GameScene.h" />
     <ClInclude Include="C:\KamataEngine\Adapter\Novice.h" />
-    <ClInclude Include="GameData\GameObject\Bullet.h" />
-    <ClInclude Include="GameData\GameObject\Collisionfunc.h" />
-    <ClInclude Include="GameData\GameObject\Enemy.h" />
+    <ClInclude Include="GameData\GameObject\ICommand.h" />
+    <ClInclude Include="GameData\GameObject\InputHandler.h" />
     <ClInclude Include="GameData\GameObject\Object.h" />
     <ClInclude Include="GameData\GameObject\Player.h" />
     <ClInclude Include="GameData\SceneManager\IScene.h" />
