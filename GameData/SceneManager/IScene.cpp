@@ -1,5 +1,5 @@
 #include "IScene.h"
 
-int Iscene::sceneNo = TITLE_SCENE;
+int Iscene::sceneNo_;
 
-int Iscene::GetSceneNo() { return sceneNo; };
+int Iscene::GetSceneNo() { return sceneNo_; };

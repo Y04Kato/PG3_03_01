@@ -7,12 +7,12 @@ void GameTitleScene::Initialize() {
 
 void GameTitleScene::Update() {
 	ImGui::Begin("GameTitleScene");
-	ImGui::Text("SceneNo:%d", sceneNo);
+	ImGui::Text("SceneNo:%d", sceneNo_);
 	ImGui::Text("GameStartKey : Space");
 	ImGui::End();
 
 	if (input_->TriggerKey(DIK_SPACE)) {
-		sceneNo = GAME_SCENE;
+		sceneNo_ = GAME_SCENE;
 	}
 }
 

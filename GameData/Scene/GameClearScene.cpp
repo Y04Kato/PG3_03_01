@@ -7,7 +7,7 @@ void GameClearScene::Initialize() {
 
 void GameClearScene::Update() {
 	ImGui::Begin("GameClearScene");
-	ImGui::Text("SceneNo:%d", sceneNo);
+	ImGui::Text("SceneNo:%d", sceneNo_);
 	ImGui::End();
 }
 

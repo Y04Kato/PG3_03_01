@@ -22,5 +22,5 @@ public:
 	int GetSceneNo();
 
 protected:
-	static int sceneNo;
+	static int sceneNo_;
 };

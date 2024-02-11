@@ -19,9 +19,10 @@ void SceneManager::Initialize() {
 	scene_[TITLE_SCENE] = std::make_unique<GameTitleScene>();
 	scene_[GAME_SCENE] = std::make_unique<GamePlayScene>();
 	scene_[CLEAR_SCENE] = std::make_unique<GameClearScene>();
-	for (int i = 0; i < SCENE_MAX; i++) {
-		scene_[i]->Initialize();
-	}
+	
+	scene_[TITLE_SCENE]->Initialize();
+
+	currentSceneNo_ = TITLE_SCENE;
 }
 
 
@@ -33,9 +34,18 @@ void SceneManager::Update() {
 		///
 		/// ↓更新処理ここから
 		///
+		previousSceneNo_ = currentSceneNo_;
+
 		currentSceneNo_ = scene_[currentSceneNo_]->GetSceneNo();
+
+		if (currentSceneNo_ != previousSceneNo_) {
+			scene_[previousSceneNo_]->Finalize();
+			scene_[currentSceneNo_]->Initialize();
+		}
+
 		scene_[currentSceneNo_]->Update();
 		scene_[currentSceneNo_]->Draw();
+
 		///
 		/// ↑更新処理ここまで
 		///

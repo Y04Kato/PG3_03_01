@@ -17,10 +17,11 @@ public:
 	//void Draw();
 	void Finalize();
 
-	int currentSceneNo_;
-
 private:
 	std::unique_ptr<Iscene>scene_[SCENE_MAX];
 
 	Input* input_ = nullptr;
+
+	int currentSceneNo_;
+	int previousSceneNo_;
 };

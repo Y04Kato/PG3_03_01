@@ -3,27 +3,21 @@
 
 void GamePlayScene::Initialize() {
 	input_ = Input::GetInstance();
+	player_ = new Player();
 }
 
 void GamePlayScene::Update() {
-	ImGui::Begin("GamePlayScene");
-	ImGui::Text("SceneNo:%d", sceneNo);
-	ImGui::Text("Clear when 5 enemies are defeated");
-	ImGui::Text("KillCount:%d", player->GetEnemyDeadCount());
-	ImGui::Text("Move:WASD");
-	ImGui::Text("Shot:Space");
-	ImGui::End();
 
-	player->Update();
-	if (player->GetEnemyDeadCount() >= 5) {
-		sceneNo = CLEAR_SCENE;
+	player_->Update();
+	if (player_->GetEnemyDeadCount() >= 5) {
+		sceneNo_ = CLEAR_SCENE;
 	}
 }
 
 void GamePlayScene::Draw() {
-	player->Draw();
+	player_->Draw();
 }
 
 void GamePlayScene::Finalize() {
-	delete player;
+	delete player_;
 }

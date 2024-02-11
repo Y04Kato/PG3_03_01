@@ -5,6 +5,7 @@ Player::Player() {
 	player.radius = 32;
 	player.speed = 6;
 	playerIsAlive = true;
+	enemyDeadCount = 0;
 
 	input_ = Input::GetInstance();
 
